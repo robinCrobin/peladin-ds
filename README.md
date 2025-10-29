@@ -140,43 +140,109 @@ Preencha as seções e tabelas abaixo com as informações do seu projeto.
 
 ## 8. Banco de Dados — Estrutura (Tabelas)
 
-Preencha cada tabela de acordo com o esquema do seu projeto.
+A seguir, apresenta-se a estrutura do banco de dados utilizada no projeto. Cada tabela contém seus respectivos campos, tipos de dados, restrições e descrições, permitindo entender claramente como as informações são armazenadas e relacionadas.
 
-### Tabela: Usuarios
+As tabelas estão organizadas de acordo com as entidades do sistema, contemplando usuários, jogadores, estatísticas, peladas, participações e moedas.
 
-| Campo | Tipo | Restrições | Descrição |
-|---|---|---|---|
-|  |  |  |  |
-
-### Tabela: Pacientes
+### Tabela: usuarios
 
 | Campo | Tipo | Restrições | Descrição |
 |---|---|---|---|
-|  |  |  |  |
+| id | SERIAL | PRIMARY KEY | Identificador único do usuário. |
+| isGoogleUser | BOOLEAN | NOT NULL | Indica se o usuário foi autenticado via Google. |
+| nome | VARCHAR(100) | NOT NULL | Nome completo do usuário. |
+| apelido | VARCHAR(50) | UNIQUE NOT NULL | Apelido usado na plataforma. |
+| email | VARCHAR(120) | UNIQUE NOT NULL | Endereço de e-mail do usuário. |
+| senha | VARCHAR(255) | NULL | Senha criptografada (nula para usuários do Google). |
+| role | ENUM('JOGADOR', 'ADMIN') | DEFAULT 'JOGADOR' | Papel do usuário na plataforma. |
+| foto | VARCHAR(255) | NULL | URL da foto de perfil do usuário. |
+| telefone | VARCHAR(20) | NULL | Número de telefone do usuário. |
+| data_nascimento | DATE | NULL | Data de nascimento do usuário. |
+| status | ENUM('ATIVO', 'INATIVO', 'BANIDO') | DEFAULT 'ATIVO' | Situação atual do usuário. |
+| criado_em | TIMESTAMP WITH TIME ZONE | DEFAULT CURRENT_TIMESTAMP | Data e hora de criação do registro. |
+| atualizado_em | TIMESTAMP WITH TIME ZONE | DEFAULT CURRENT_TIMESTAMP | Data e hora da última atualização do registro. |
 
-### Tabela: Medicos
-
-| Campo | Tipo | Restrições | Descrição |
-|---|---|---|---|
-|  |  |  |  |
-
-### Tabela: Administradores
-
-| Campo | Tipo | Restrições | Descrição |
-|---|---|---|---|
-|  |  |  |  |
-
-### Tabela: Consultas
-
-| Campo | Tipo | Restrições | Descrição |
-|---|---|---|---|
-|  |  |  |  |
-
-### Tabela: Especialidades
+### Tabela: jogadores
 
 | Campo | Tipo | Restrições | Descrição |
 |---|---|---|---|
-|  |  |  |  |
+| usuario_id | INT | PRIMARY KEY, FOREIGN KEY (usuario_id) REFERENCES usuarios(id) | Identificador do usuário. |
+| posicao | ENUM('GOLEIRO', 'ZAGUEIRO', 'LATERAL', 'ALA', 'VOLANTE', 'MEIO_CAMPO', 'PONTA', 'ATACANTE') | NULL | Posição em que o jogador atua. |
+| nacionalidade | ENUM('BRASILEIRO', 'ARGENTINO', 'CHILENO', 'URUGUAIO', 'PARAGUAIO', 'OUTRO') | NULL | Nacionalidade do jogador. |
+
+
+### Tabela: estatisticas
+
+| Campo | Tipo | Restrições | Descrição |
+|---|---|---|---|
+| usuario_id | INTEGER | NOT NULL, FK usuários | ID do usuário |
+| jogos | INTEGER | NOT NULL DEFAULT 0 | Número de jogos disputados |
+| gols | INTEGER | NOT NULL DEFAULT 0 | Total de gols |
+| assistencias | INTEGER | NOT NULL DEFAULT 0 | Total de assistências |
+| defesas | INTEGER | NOT NULL DEFAULT 0 | Total de defesas |
+| ATA | DECIMAL | NOT NULL DEFAULT 40.0 & < 100 | Atributo ofensivo do jogador |
+| DEF | DECIMAL | NOT NULL DEFAULT 40.0 & < 100 | Atributo defensivo do jogador |
+| FOR | DECIMAL | NOT NULL DEFAULT 40.0 & < 100| Atributo físico do jogador |
+| overall | DECIMAL | NOT NULL DEFAULT 40.0 & < 100 | Avaliação geral do jogador |
+| avaliacoes | INTEGER | NOT NULL DEFAULT 0 | Número de avaliações recebidas |
+| notaGeral | DECIMAL | NOT NULL DEFAULT 0.0, < 10 | Nota geral do jogador |
+| notaParticipacao | DECIMAL | NOT NULL DEFAULT 0.0, < 10 | Nota de participação |
+| criado_em | TIMESTAMP | NOT NULL | Data de criação do registro |
+| atualizado_em | TIMESTAMP | NOT NULL | Data da última atualização |
+| craques | INTEGER | NOT NULL DEFAULT 0 | Número de vezes eleito craque |
+| bagres | INTEGER | NOT NULL DEFAULT 0 | Número de vezes eleito bagre |
+
+
+### Tabela: peladas
+
+| Campo | Tipo | Restrições | Descrição |
+|---|---|---|---|
+| id | INT | PRIMARY KEY, AUTO_INCREMENT | Identificador único da pelada. |
+| nome | VARCHAR(100) | NOT NULL | Nome da pelada. |
+| descricao | TEXT | - | Descrição detalhada sobre a pelada. |
+| foto | VARCHAR(255) | - | imagem convertida em BASE 64 representando a pelada. |
+| tipo_campo | ENUM('futsal', 'society', 'campo') | NOT NULL | Tipo de campo onde a pelada será jogada. |
+| modalidade | ENUM('3x3, '4x4', '5x5', '6x6', '7x7', '8x8', '9x9', '10x10', '11x11') | NOT NULL | Modalidade da pelada. |
+| data | DATE | NOT NULL | Data em que a pelada ocorrerá. |
+| hora | TIME | NOT NULL | Horário de início da pelada. |
+| duracao | INT | NOT NULL | Duração da pelada em minutos. |
+| valor_pelada | DECIMAL(10,2) | DEFAULT 0.00 | Valor de participação na pelada. |
+| status | ENUM('AGENDADA', 'CONFIRMADA', 'EM_ANDAMENTO', 'AGUARDANDO_AVALIACAO', 'FINALIZADA, CANCELADA') | DEFAULT 'AGENDADA' | Estado atual da pelada. |
+| endereco | VARCHAR(255) | NOT NULL | Endereço completo do local da pelada. |
+| dono_id | INT | NOT NULL, FOREIGN KEY (dono_id) REFERENCES usuarios(id) | ID do usuário que criou a pelada. |
+| craque_da_pelada_id | INT | NULL, FOREIGN KEY (craque_da_pelada_id) REFERENCES usuarios(id) | ID do jogador eleito craque da pelada. |
+| bagre_da_pelada_id | INT | NULL, FOREIGN KEY (bagre_da_pelada_id) REFERENCES usuarios(id) | ID do jogador eleito bagre da pelada. |
+| criado_em | DATETIME | DEFAULT CURRENT_TIMESTAMP | Data e hora de criação do registro. |
+| atualizado_em | DATETIME | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP | Data e hora da última atualização do registro. |
+
+
+### Tabela: participacoes_na_pelada
+
+| Campo | Tipo | Restrições | Descrição |
+|---|---|---|---|
+| id | SERIAL | PRIMARY KEY | Identificador único da participação. |
+| usuario_id | INT | NOT NULL, FOREIGN KEY (usuario_id) REFERENCES usuarios(id) | Identificador do usuário participante. |
+| pelada_id | INT | NOT NULL, FOREIGN KEY (pelada_id) REFERENCES peladas(id) | Identificador da pelada associada. |
+| status | ENUM('CONFIRMADO', 'PENDENTE', 'CANCELADO', 'CONVIDADO') | DEFAULT 'PENDENTE' | Situação da participação do jogador na pelada. |
+| time | CHAR(1) | NULL | Time ao qual o jogador pertence (ex: 'A', 'B'). |
+| criado_em | TIMESTAMP WITH TIME ZONE | DEFAULT CURRENT_TIMESTAMP | Data e hora de criação do registro. |
+| atualizado_em | TIMESTAMP WITH TIME ZONE | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP | Data e hora da última atualização. |
+| media_avaliacao | DECIMAL(3,1) | DEFAULT 0.0 & < 100 | Média de avaliação do jogador na pelada. |
+| estatisticas_inseridas | BOOLEAN | DEFAULT FALSE | Indica se as estatísticas do jogador já foram inseridas. |
+| avaliacoes_concluidas | BOOLEAN | DEFAULT FALSE | Indica se o jogador concluiu suas avaliações. |
+| posicao_x | DECIMAL(5,2) | NULL | Coordenada X do jogador no campo (para visualização tática). |
+| posicao_y | DECIMAL(5,2) | NULL | Coordenada Y do jogador no campo (para visualização tática). |
+
+
+### Tabela: moedas
+
+| Campo | Tipo | Restrições | Descrição |
+|---|---|---|---|
+| usuario_id | INT | PRIMARY KEY, FOREIGN KEY (usuario_id) REFERENCES usuarios(id) | Identificador do usuário dono das moedas. |
+| saldo | DECIMAL(10,2) | DEFAULT 0.00, NOT NULL | Quantidade atual de moedas do usuário. |
+| ultimaAtualizacao | TIMESTAMP WITH TIME ZONE | NOT NULL | Data e hora da última alteração de saldo. |
+| criado_em | TIMESTAMP WITH TIME ZONE | DEFAULT CURRENT_TIMESTAMP | Data e hora de criação do registro. |
+| atualizado_em | TIMESTAMP WITH TIME ZONE | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP | Data e hora da última atualização do registro. |
 
 ## 9. Requisitos de Segurança
 
