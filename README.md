@@ -219,10 +219,6 @@ Preencha cada tabela de acordo com o esquema do seu projeto.
 | Figma (Identidade visual) | https://www.figma.com/design/AlK5OFJgyJJNIAY8Pa7G01/PeladIn--Copy-?node-id=0-1&t=qId81isUUFgxN6Dv-1  |  |
 
 
-## 12. Contatos
-
-- Time / Squad:
-- E-mail de contato:
 
 ---
 
