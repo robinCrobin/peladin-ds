@@ -21,7 +21,7 @@ Preencha as seções e tabelas abaixo com as informações do seu projeto.
 
 ### Desenho Arquitetural
 
-![Diagrama de Visão Geral](assets/diagramaVisaoGeral.png)
+![Diagrama de Visão Geral](../assets/diagramaVisaoGeral.png)
 
 ## 3. Identidade Visual
 
