@@ -13,11 +13,11 @@ Preencha as seções e tabelas abaixo com as informações do seu projeto.
 
 ### Estilo Arquitetural
 
-- Estilo adotado:
+- Estilo adotado: Monólito
 
 ### Padrão Arquitetural
 
-- Padrão adotado (ex.: MVC):
+- Padrão adotado: MVC
 
 ### Desenho Arquitetural
 
@@ -55,7 +55,7 @@ Preencha as seções e tabelas abaixo com as informações do seu projeto.
 | --cor-borda | #cccccc | Cor padrão de bordas |
 | --cor-borda-clara | #e0e0e0 | Cor de borda mais clara |
 
-#### black
+#### black mode
 | Nome | Código HEX | Uso Principal |
 |---|---:|---|
 | --cor-bg-base (dark) | #000000 | Background base (modo escuro) |
@@ -129,10 +129,10 @@ Preencha as seções e tabelas abaixo com as informações do seu projeto.
 
 | Camada | Tecnologias / Bibliotecas | Observações |
 |---|---|---|
-| Frontend |  |  |
-| Backend |  |  |
-| Autenticação |  |  |
-| Comunicação entre serviços |  |  |
+| Frontend | React, Tailwind CSS e Flutter| React + Tailwind CSS para web e flutter para mobile |
+| Backend | Node.js |  |
+| Autenticação | JWT com OAuth2 | Proteções contra SQL Injectio  |
+| Comunicação entre serviços | RabbitMQ |  |
 
 ## 8. Banco de Dados — Estrutura (Tabelas)
 
