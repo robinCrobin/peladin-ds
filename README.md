@@ -266,9 +266,10 @@ As tabelas estão organizadas de acordo com as entidades do sistema, contempland
 
 ### Boas Práticas
 
-- Nomeação de componentes:
-- Testes automatizados:
-- Revisões e manutenção:
+- Nomeação clara e consistente de componentes.
+- Testes automatizados para todos os componentes (visuais e unitários).
+- Revisões quinzenais do sistema para identificar componentes obsoletos ou duplicados.
+- Alinhamento com tokens de design centralizados.
 
 ### Ciclo de Revisão
 
