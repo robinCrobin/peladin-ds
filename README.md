@@ -244,11 +244,34 @@ As tabelas estão organizadas de acordo com as entidades do sistema, contempland
 | criado_em | TIMESTAMP WITH TIME ZONE | DEFAULT CURRENT_TIMESTAMP | Data e hora de criação do registro. |
 | atualizado_em | TIMESTAMP WITH TIME ZONE | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP | Data e hora da última atualização do registro. |
 
-## 9. Requisitos de Segurança
+## 9. Restrições Arquiteturais
 
-| Requisito | Detalhes |
-|---|---|
-|  |  |
+As restrições impostas ao projeto que afetam sua arquitetura são:
+
+- O sistema deve utilizar um modelo baseado em Web Service para comunicação e disponibilização de funcionalidades.
+- O sistema deve prover serviços tanto para ambiente web quanto para dispositivos móveis.
+- O front-end deve ser implementado com tecnologias móveis e/ou híbridas que suportem multiplataforma.
+- O sistema deve incorporar middlewares e tecnologias associadas para processamento de mensagens em tempo real.
+- O sistema deve permitir que múltiplos clientes se conectem simultaneamente a um único servidor, realizando operações concorrentes.
+- O sistema deve tratar erros de comunicação, indisponibilidade do servidor, timeouts, entre outros, utilizando reenvio de mensagens.
+- O sistema deve possuir estratégias e implementações para testes.
+- O sistema deve utilizar serviços em nuvem para hospedagem e/ou recursos.
+- O sistema web deve ser hospedado em uma plataforma de nuvem gratuita.
+
+#### Mecanismos Arquiteturais
+
+Os mecanismos arquiteturais adotados neste projeto são:
+
+| **Análise** | **Design** | **Implementação** |
+| --- | --- | --- |
+| Persistência | Banco de dados relacional | PostgreSQL + Sequelize |
+| Front end | SPA | ReactJS |
+| Back end | Rest API | NodeJS + Express |
+| Aplicativo | Tecnologia Android e IOS | Flutter |
+| Integração | Event driven | RabbitMQ |
+| Log do sistema | | Winston |
+| Teste de Software | Testes unitários | Jest |
+| Deploy | Cloud | Render |
 
 ## 10. Governança do Design System
 
@@ -261,8 +284,7 @@ As tabelas estão organizadas de acordo com as entidades do sistema, contempland
 
 1. **Proposição**: novos componentes ou alterações são sugeridos via Pull Request em repositório dedicado.
 2. **Revisão**: a equipe de governança avalia a aderência às diretrizes de acessibilidade, responsividade, padronização e reuso.
-3. **Documentação**: cada alteração aceita deve ser documentada no Storybook e registrada no Notion com data e responsáveis.
-4. **Publicação**: os componentes aprovados são publicados via **npm** e disponibilizados para todos os serviços no monorepo via **Turborepo**.
+3. **Documentação**: cada alteração aceita deve ser documentada no github projects do projeto.
 
 ### Boas Práticas
 
