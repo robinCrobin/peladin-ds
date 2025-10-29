@@ -70,19 +70,23 @@ Preencha as seções e tabelas abaixo com as informações do seu projeto.
 |---|---|---|
 |  |  |  |
 
-## 6. Jornadas do Usuário
+### 6. Jornadas do Usuário
 
-| Perfil | Principais Ações / Fluxo |
-|---|---|
-| Médico |  |
-| Paciente |  |
-| Admin |  |
+#### Peladeiro
+- Se cadastra
+- Edita seu perfil
+- Gerencia pelada
+- Entra na pelada
+- Visualiza calendario
+- Separa times
+- Cadastra estatisticas da pelada
+- Avalia jogadores
 
 ## 7. Tecnologias
 
 | Camada | Tecnologias / Bibliotecas | Observações |
 |---|---|---|
-| Frontend |  |  |
+| Frontend | |  |
 | Backend |  |  |
 | Autenticação |  |  |
 | Comunicação entre serviços |  |  |
