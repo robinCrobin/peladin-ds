@@ -13,11 +13,11 @@ Preencha as seções e tabelas abaixo com as informações do seu projeto.
 
 ### Estilo Arquitetural
 
-- Estilo adotado: Monólito
+- Estilo adotado: Monólito, pelos beneficios da simplicidade, baixo custo, integração direta e deploy fácil
 
 ### Padrão Arquitetural
 
-- Padrão adotado: MVC
+- Padrão adotado: MVC, pelos beneficios da organização, separação de responsabilidades e facilidade de integração com frontends React e Flutter
 
 ### Desenho Arquitetural
 
