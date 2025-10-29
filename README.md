@@ -272,11 +272,9 @@ As tabelas estão organizadas de acordo com as entidades do sistema, contempland
 
 ### Ciclo de Revisão
 
-| Período | Ação |
-|---|---|
-| Mensal |  |
-| Semestral |  |
-| Sob demanda |  |
+- **Mensal**: revisão geral da biblioteca para garantir consistência.
+- **Semestral**: atualização de tokens de identidade visual, quando necessário.
+- **Sob demanda**: atualização de componentes com base em feedbacks das equipes ou necessidade de novos fluxos.
 
 ## 11. Links Úteis
 
