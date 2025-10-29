@@ -5,9 +5,9 @@ Preencha as seções e tabelas abaixo com as informações do seu projeto.
 
 ## 1. Visão Geral
 
-- Nome do projeto:
-- Descrição curta:
-- Objetivo:
+- **Nome do projeto**: PeladIn
+- **Descrição curta**: O PeladIn é uma plataforma dedicada à marcação de partidas de futebol amador, projetada para simplificar e otimizar o processo de organização de peladas entre amigos e grupos de jogadores. 
+- **Objetivo**: O objetivo é fornecer uma solução intuitiva e eficiente que permita aos usuários agendar jogos com facilidade, encontrar o local e horário mais adequados para as partidas e promover a integração social e a diversão através do esporte.
 
 ## 2. Arquitetura
 
