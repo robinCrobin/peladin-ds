@@ -133,8 +133,8 @@ Preencha as seções e tabelas abaixo com as informações do seu projeto.
 
 | Camada | Tecnologias / Bibliotecas | Observações |
 |---|---|---|
-| Frontend | React, Tailwind CSS e Flutter| React + Tailwind CSS para web e flutter para mobile |
-| Backend | Node.js |  |
+| Frontend | React, Tailwind CSS e Flutter| React + Tailwind CSS para web e flutter para mobile, vite e postcss |
+| Backend | Node.js, com bscript, cors e dotenv|  |
 | Autenticação | JWT com OAuth2 | Proteções contra SQL Injectio  |
 | Comunicação entre serviços | RabbitMQ |  |
 
