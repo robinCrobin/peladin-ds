@@ -1,13 +1,9 @@
+![Header - PeladIn (2)](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti2-1372100-peladin/assets/136115980/14831416-87e4-4105-832d-2b606e8ea51b)
 
-# Design System — Template
+# Peladin
 
-Preencha as seções e tabelas abaixo com as informações do seu projeto.
-
-## 1. Visão Geral
-
-- **Nome do projeto**: PeladIn
-- **Descrição curta**: O PeladIn é uma plataforma dedicada à marcação de partidas de futebol amador, projetada para simplificar e otimizar o processo de organização de peladas entre amigos e grupos de jogadores. 
-- **Objetivo**: O objetivo é fornecer uma solução intuitiva e eficiente que permita aos usuários agendar jogos com facilidade, encontrar o local e horário mais adequados para as partidas e promover a integração social e a diversão através do esporte.
+O PeladIn é uma plataforma dedicada à marcação de partidas de futebol amador, projetada para simplificar e otimizar o processo de organização de peladas entre amigos e grupos de jogadores. 
+O objetivo é fornecer uma solução intuitiva e eficiente que permita aos usuários agendar jogos com facilidade, encontrar o local e horário mais adequados para as partidas e promover a integração social e a diversão através do esporte.
 
 ## 2. Arquitetura
 
@@ -90,32 +86,57 @@ Preencha as seções e tabelas abaixo com as informações do seu projeto.
 ### Botões
 
 | Variante | Cor | Borda | Texto | Uso |
-|---|---:|---:|---|---|
-|  |  |  |  |  |
+|---|---|---|---|---|
+| green | #22C55E | #22C55E | Preto | Ação principal, ocupa toda a largura |
+| white | #FFFFFF | #D1D5DB | Cinza escuro | Ação secundária ou neutra |
+| outlined | TRANSPARENT | #FFFFFF | Branco | Ações em fundos escuros, efeito hover invertido |
+| black | #000000 | #27272A | Branco | Botões menores ou de destaque dentro de cards |
+
+---
 
 ### Inputs
 
 | Propriedade | Valor |
 |---|---|
-| Altura |  |
-| Bordas |  |
-| Placeholder |  |
-| Tipos suportados |  |
+| Altura | 2.5rem (aprox. 40px) |
+| Bordas | 1px sólida, arredondada (md) |
+| Placeholder | `" "` (usado para labels flutuantes) |
+| Tipos suportados | text, password, number, email, etc. |
+
+---
 
 ### Cards
 
 | Propriedade | Valor |
 |---|---|
-| Fundo |  |
-| Borda |  |
-| Bordas arredondadas |  |
-| Espaçamento interno |  |
+| Fundo | `bg-surface` (#f5f5f5) |
+| Borda | nenhuma / sombra leve (`shadow-md`) |
+| Bordas arredondadas | `rounded-xl` |
+| Espaçamento interno | `p-3` (12px) |
+
+---
 
 ## 5. Ícones
 
 | Ícone | Nome | Uso |
 |---|---|---|
-|  |  |  |
+| UilMapMarker | Mapa / localização | Exibir endereço ou local da pelada |
+| UilCalendarAlt | Calendário | Mostrar data da pelada |
+| UilClock | Relógio | Mostrar horário da pelada |
+| UilDollarSign | Cifrão | Botão de pagamento ou informações financeiras |
+| UilAngleLeft / UilAngleRight | Setas | Navegação ou carrossel |
+| UilTimes | X / Fechar | Fechar modal ou cancelar ação |
+| UilExchange | Troca | Alternar ou trocar algo |
+| UilUser | Usuário | Perfil, avatar ou participante |
+| UilShuffle | Embaralhar | Misturar lista ou ordem |
+| UilCheckCircle | Confirmar | Ações confirmadas ou sucesso |
+| UilCamera | Câmera | Upload de foto |
+| UilCheck | Check | Confirmação simples |
+| UilFootball | Bola de futebol | Exibir esportes ou tipo de atividade |
+| UilBars | Menu / hambúrguer | Abrir menu lateral |
+| UilSignOutAlt | Sair | Logout / sair do sistema |
+| UilTrophy | Troféu | Exibir premiações ou conquistas |
+
 
 ### 6. Jornadas do Usuário
 
