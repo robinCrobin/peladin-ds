@@ -254,15 +254,15 @@ As tabelas estão organizadas de acordo com as entidades do sistema, contempland
 
 ### Responsáveis
 
-| Papel | Nome | Responsabilidades |
-|---|---|---|
-|  |  |  |
+- **Squad de Design System**: formado por representantes de design, frontend e arquitetura.
+- **Designers e Desenvolvedores de cada squad**: responsáveis por propor novos componentes e colaborar com manutenções.
 
 ### Processo de Atualização
 
-| Etapa | Descrição | Responsável | Frequência |
-|---|---|---:|---|
-|  |  |  |  |
+1. **Proposição**: novos componentes ou alterações são sugeridos via Pull Request em repositório dedicado.
+2. **Revisão**: a equipe de governança avalia a aderência às diretrizes de acessibilidade, responsividade, padronização e reuso.
+3. **Documentação**: cada alteração aceita deve ser documentada no Storybook e registrada no Notion com data e responsáveis.
+4. **Publicação**: os componentes aprovados são publicados via **npm** e disponibilizados para todos os serviços no monorepo via **Turborepo**.
 
 ### Boas Práticas
 
