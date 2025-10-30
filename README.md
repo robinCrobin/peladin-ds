@@ -1,4 +1,4 @@
-![Header - PeladIn (2)](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti2-1372100-peladin/assets/136115980/14831416-87e4-4105-832d-2b606e8ea51b)
+<img width="1000" height="250" alt="326630836-14831416-87e4-4105-832d-2b606e8ea51b" src="https://github.com/user-attachments/assets/f300fb50-5eb9-4a57-923d-008b46e8a998" />
 
 # Peladin
 
