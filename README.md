@@ -165,6 +165,9 @@ A seguir, apresenta-se a estrutura do banco de dados utilizada no projeto. Cada 
 
 As tabelas estão organizadas de acordo com as entidades do sistema, contemplando usuários, jogadores, estatísticas, peladas, participações e moedas.
 
+![Diagrama de Modelo de Dados](assets/modelo-de-dados-peladin.jpeg)
+
+
 ### Tabela: usuarios
 
 | Campo | Tipo | Restrições | Descrição |
