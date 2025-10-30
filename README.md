@@ -156,7 +156,7 @@ O objetivo é fornecer uma solução intuitiva e eficiente que permita aos usuá
 |---|---|---|
 | Frontend | React, Tailwind CSS e Flutter| React + Tailwind CSS para web e flutter para mobile, vite e postcss |
 | Backend | Node.js, com bscript, cors e dotenv|  |
-| Autenticação | JWT com OAuth2 | Proteções contra SQL Injectio  |
+| Autenticação | JWT com OAuth2 | Proteções contra SQL Injection  |
 | Comunicação entre serviços | RabbitMQ |  |
 
 ## 8. Banco de Dados — Estrutura (Tabelas)
