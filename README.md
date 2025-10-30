@@ -328,21 +328,3 @@ Os mecanismos arquiteturais adotados neste projeto são:
 | Recurso | URL | Observações |
 |---|---|---|
 | Figma (Identidade visual) | https://www.figma.com/design/AlK5OFJgyJJNIAY8Pa7G01/PeladIn--Copy-?node-id=0-1&t=qId81isUUFgxN6Dv-1  |  |
-
-
-
----
-
-Preencha as linhas vazias das tabelas e campos de texto com as informações do seu projeto.
-
----
-
-## COMPONENTES ESSENCIAIS
-
-1. **Monolito**  
-2. **Arquitetura em camadas com MVC**  
-3. **REST, com RabbitMQ**  
-4. **SQL, caching para consultas**  
-5. **Horizontal, com load balancing**  
-6. **Autenticação JWT com OAuth2, proteções contra SQL Injection**  
-7. **HealthCheck, logs estruturados**
