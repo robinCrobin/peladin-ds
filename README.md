@@ -9,7 +9,7 @@ O objetivo é fornecer uma solução intuitiva e eficiente que permita aos usuá
 
 ### Estilo Arquitetural
 
-- Estilo adotado: Monólito, pelos beneficios da simplicidade, baixo custo, integração direta e deploy fácil
+- Estilo adotado: Monólitico, pelos beneficios da simplicidade, baixo custo, integração direta e deploy fácil
 
 ### Padrão Arquitetural
 
